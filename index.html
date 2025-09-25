@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digitle india</title>
-</head>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital India</title>
+  <style>
     body {
-        background-color: rgb(30, 29, 29);
-        color: aliceblue;
-        text-align: center;
-        font-size: larger;
-
+      background-color: rgb(30, 29, 29);
+      color: aliceblue;
+      text-align: center;
+      font-size: larger;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      margin: 0;
     }
-    .card
-    {
-        border: 2px whitesmoke;
-        width: 66%;
-        margin:auto;
 
+    .card {
+      border: 2px solid whitesmoke;
+      width: 66%;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 10px;
+
+      /* Background image only for the card */
+      background: rgba(0, 0, 0, 0.6) url("image/p1.png") no-repeat center;
+      background-size: contain;
+      background-blend-mode: overlay; /* makes image faint under dark layer */
     }
-</style>
+
+    h1 {
+      margin-top: 3rem;
+      text-shadow: 2px 2px 5px black;
+    }
+  </style>
+</head>
 <body>
- <h1> <b>  work is under construction.<br/>
-    please wait to be suprided.</b></h1>
-    <div id="card">
-        I am working for the artist of the month web designing category.
-
+  <h1><b>Work is under construction.<br/>Please wait to be surprised.</b></h1>
+  <div class="card">
+    I am working for the <b>Artist of the Month</b> web designing category.
+  </div>
 </body>
 </html>
