@@ -1,43 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital India</title>
-  <style>
-    body {
-      background-color: rgb(30, 29, 29);
-      color: aliceblue;
-      text-align: center;
-      font-size: larger;
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
-      margin: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital India 2047</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+html{
+	scroll-behavior: smooth;
+}
+:root{
+  --saffron:#FF9933;
+  --white:#ffffff;
+  --green:#138808;
+  --blue:#000080;
+  --bg:#0d1117;
+  --muted:rgba(255,255,255,0.7);
+  --radius:18px;
+}
 
-    .card {
-      border: 2px solid whitesmoke;
-      width: 66%;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      border-radius: 10px;
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:Inter, sans-serif;
+  background: linear-gradient(to bottom,#0d1117,#05080f);
+  color: var(--white);
+  line-height:1.6;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
 
-      /* Background image only for the card */
-      background: rgba(0, 0, 0, 0.6) url("image/p1.png") no-repeat center;
-      background-size: contain;
-      background-blend-mode: overlay; /* makes image faint under dark layer */
-    }
+nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(20,20,20,0.9));
+  display:flex;
+  justify-content: center;
+  gap:30px;
+  padding:15px;
+  z-index:1000;
+  backdrop-filter: blur(8px);
+}
+nav a{
+  color: var(--white);
+  text-decoration:none;
+  font-weight:600;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover{
+  color: var(--saffron);
+  transform: scale(1.1);
+}
 
-    h1 {
-      margin-top: 3rem;
-      text-shadow: 2px 2px 5px black;
-    }
-  </style>
+header{
+  text-align:center;
+  padding:120px 20px 80px 20px;
+  background: url('image/india-digital-bg.png') no-repeat center/cover;
+  position:relative;
+  overflow:hidden;
+}
+header::after{
+  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+}
+header h1{
+  font-size:50px;
+  font-weight:800;
+  color: var(--white);
+  position: relative;
+  z-index:1;
+  text-shadow:0 0 15px #fff;
+  animation: fadeInUp 1s ease forwards;
+}
+header p{
+  margin-top:15px;
+  font-size:18px;
+  font-weight:500;
+  position: relative;
+  z-index:1;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+section{
+  max-width:1100px;
+  margin:80px auto;
+  padding:20px;
+}
+h2{
+  font-size:32px;
+  margin-bottom:25px;
+  color:var(--saffron);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+h2::after{
+  content:''; width:60px; height:3px;
+  background:var(--green);
+  display:block;
+  margin-top:5px;
+  border-radius:2px;
+}
+.lead{
+  font-size:18px;
+  color:var(--muted);
+  margin-bottom:30px;
+}
+
+#struggles{
+  background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1));
+  border-left:5px solid var(--saffron);
+  border-radius: var(--radius);
+  padding:30px;
+  margin-top:40px;
+  box-shadow:0 0 25px rgba(255,255,255,0.08);
+}
+#struggles p{
+  margin-bottom:20px;
+  font-size:17px;
+  color: var(--muted);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  cursor:pointer;
+  text-align:center;
+  backdrop-filter: blur(5px);
+}
+.card:hover{
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:0 0 35px rgba(0,255,255,0.5);
+  background: rgba(255,255,255,0.12);
+}
+.card h3{margin-bottom:10px; font-size:20px; color:var(--white);}
+.card p{font-size:15px; color:var(--muted);}
+
+.map-container{
+  position:relative;
+  width:100%;
+  max-width:900px;
+  margin:auto;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 0 30px rgba(0,200,255,0.5);
+}
+.map-container img{width:100%; display:block; border-radius: var(--radius);}
+.hotspot{
+  position:absolute;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background: var(--saffron);
+  box-shadow: 0 0 10px #fff,0 0 25px var(--saffron);
+  cursor:pointer;
+  transition: all 0.3s;
+}
+.hotspot:hover{
+  transform: scale(1.6);
+  background:#00ff99;
+}
+.hotspot::after{
+  content: attr(data-text);
+  position:absolute;
+  bottom:30px;
+  left:-40px;
+  width:180px;
+  background: rgba(0,0,0,0.8);
+  color:#fff;
+  padding:8px;
+  font-size:13px;
+  border-radius:6px;
+  opacity:0;
+  transform: translateY(10px);
+  transition:0.3s;
+  pointer-events:none;
+}
+.hotspot:hover::after{
+  opacity:1;
+  transform: translateY(0);
+}
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  background:linear-gradient(90deg,var(--saffron),var(--white),var(--green));
+  color:#000;
+  font-weight:600;
+  margin-top:60px;
+  transition: all 0.3s;
+}
+footer:hover{
+  box-shadow:0 0 25px rgba(0,255,255,0.4);
+  transform: scale(1.02);
+}
+
+@keyframes fadeInUp{
+  0%{opacity:0; transform: translateY(20px);}
+  100%{opacity:1; transform: translateY(0);}
+}
+
+/* Mobile & Responsive */
+@media(max-width:900px){
+  header h1{font-size:38px;}
+  header p{font-size:16px;}
+}
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr;}
+  .card{padding:20px;}
+  nav{flex-direction:column; gap:15px;}
+  .hotspot{width:20px; height:20px;}
+}
+</style>
 </head>
 <body>
-  <h1><b>Work is under construction.<br/>Please wait to be surprised.</b></h1>
-  <div class="card">
-    I am working for the <b>Artist of the Month</b> web designing category.
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#struggles">Struggles</a>
+  <a href="#vision">Vision</a>
+  <a href="#innovations">Innovations</a>
+  <a href="#goals">Goals</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header id="home">
+  <h1>🇮🇳 Digital India 2047</h1>
+  <p>Celebrating 100 Years of Progress Through Technology</p>
+</header>
+
+<section id="struggles">
+  <h2>The Journey of Struggles & Growth</h2>
+  <p>India’s path to becoming a digital superpower was not without challenges. In the early decades after independence, the nation faced impediments like poverty, illiteracy, lack of infrastructure, and limited access to technology. Rural and urban divides further slowed down progress, making it difficult for millions to access quality education, healthcare, and governance services.</p>
+  <p>Despite these struggles, India embraced resilience and innovation. With the rise of IT hubs, affordable internet connectivity, and government-led digital initiatives, the country transformed its technological landscape. From overcoming the digital divide to launching satellites and advancing AI research, India steadily grew into a nation where technology empowers every citizen and drives global innovation.</p>
+</section>
+
+
+<section id="vision">
+  <h2>Vision 2047</h2>
+  <p class="lead">In 2047, India is a global leader in AI, green tech, digital education, smart cities, and inclusive technology.</p>
+  <div class="grid">
+    <div class="card">🏙️<h3>Smart Cities</h3><p>AI-driven infrastructure and connected urban spaces for sustainable living.</p></div>
+    <div class="card">🩺<h3>AI in Health & Education</h3><p>Smart diagnostics, personalized learning, and AI-assisted services nationwide.</p></div>
+    <div class="card">🚆<h3>Clean & Connected Transport</h3><p>Electric vehicles, hyperloop, and smart traffic management systems.</p></div>
+    <div class="card">🏡<h3>Digital Villages</h3><p>Rural areas empowered with internet, e-governance, and digital marketplaces.</p></div>
+    <div class="card">📜<h3>100% Digital Governance</h3><p>Transparent, citizen-first digital services across the country.</p></div>
   </div>
+</section>
+
+
+<section id="innovations">
+  <h2>Technologies Shaping India</h2>
+  <div class="grid">
+    <div class="card">🌐<h3>6G Internet & Satellite Connectivity</h3><p>Ultra-fast, low-latency networks for all citizens.</p></div>
+    <div class="card">🤖<h3>AI in Agriculture</h3><p>Automated farming, smart irrigation, and precision agriculture.</p></div>
+    <div class="card">🏥<h3>Robotics in Hospitals</h3><p>Remote surgery, AI diagnostics, and hospital automation.</p></div>
+    <div class="card">🔗<h3>Blockchain for Governance</h3><p>Transparent, secure, and decentralized government services.</p></div>
+    <div class="card">🕶️<h3>AR/VR in Education</h3><p>Immersive learning making education interactive and fun.</p></div>
+    <div class="card">⚡<h3>Renewable Energy Grid</h3><p>Decentralized solar, wind, and hydroelectric power systems.</p></div>
+  </div>
+</section>
+
+
+
+<section id="map">
+  <h2>Innovation Map</h2>
+  <div class="map-container">
+    <img src="image/p1.png" alt="Innovation Map">
+    <div class="hotspot hotspot-north" data-text="Battery & EV Revolution"></div>
+    <div class="hotspot hotspot-west" data-text="Smart Cities & Governance"></div>
+    <div class="hotspot hotspot-south" data-text="IT & Future Tech"></div>
+    <div class="hotspot hotspot-east" data-text="Cloud & Cybersecurity"></div>
+    <div class="hotspot hotspot-central" data-text="AI in Agriculture"></div>
+  </div>
+</section>
+
+
+<section id="goals">
+  <h2>Focus Areas</h2>
+  <div class="grid">
+    <div class="card">🌐<h3>Infrastructure</h3><p>6G, mesh networks, and green energy-powered data centers.</p></div>
+    <div class="card">💰<h3>Economy</h3><p>Empowering startups, micro-entrepreneurs, and global digital leadership.</p></div>
+    <div class="card">🏛<h3>Governance</h3><p>AI-powered transparent digital platforms and citizen-first policies.</p></div>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="lead">Connect with the Digital India 2047 initiative to learn more or collaborate.</p>
+  <p>Email: digitalindia2047@gmail.com | Phone: +91-123-456-7890</p>
+</section>
+
+
+<footer>
+  Digital India 2047 — By sudeep mishra
+</footer>
+
 </body>
 </html>
