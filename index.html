@@ -7,8 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 html{
-	scroll-behavior: smooth;
-}
+	scroll-behavior: smooth;}
 :root{
   --saffron:#FF9933;
   --white:#ffffff;
@@ -207,7 +206,6 @@ footer:hover{
   100%{opacity:1; transform: translateY(0);}
 }
 
-/* Mobile & Responsive */
 @media(max-width:900px){
   header h1{font-size:38px;}
   header p{font-size:16px;}
@@ -215,8 +213,9 @@ footer:hover{
 @media(max-width:600px){
   .grid{grid-template-columns:1fr;}
   .card{padding:20px;}
-  nav{flex-direction:column; gap:15px;}
+  nav{flex-wrap:wrap; gap:15px;}
   .hotspot{width:20px; height:20px;}
+  header{margin-top:100px;}
 }
 </style>
 </head>
