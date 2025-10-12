@@ -1,83 +1,83 @@
+
+<!--this page is creaetd by sudeep mishra student of arena amimation.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital India 2047</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-html{
-	scroll-behavior: smooth;}
+html{scroll-behavior:smooth;}
 :root{
   --saffron:#FF9933;
   --white:#ffffff;
   --green:#138808;
-  --blue:#000080;
   --bg:#0d1117;
   --muted:rgba(255,255,255,0.7);
   --radius:18px;
 }
-
 *{box-sizing:border-box;margin:0;padding:0;}
 body{
-  font-family:Inter, sans-serif;
-  background: linear-gradient(to bottom,#0d1117,#05080f);
-  color: var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(to bottom,#0d1117,#05080f);
+  color:var(--white);
   line-height:1.6;
   overflow-x:hidden;
-  scroll-behavior: smooth;
 }
+
 
 nav{
   position:fixed;
-  top:0; left:0; right:0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(20,20,20,0.9));
+  top:0;left:0;right:0;
+  background:linear-gradient(90deg,rgba(0,0,0,0.9),rgba(20,20,20,0.9));
   display:flex;
-  justify-content: center;
+  justify-content:center;
   gap:30px;
   padding:15px;
   z-index:1000;
-  backdrop-filter: blur(8px);
+  backdrop-filter:blur(8px);
 }
 nav a{
-  color: var(--white);
+  color:var(--white);
   text-decoration:none;
-  font-weight:600;
-  transition: color 0.3s, transform 0.3s;
+  font-weight:bold;
+  transition:color 0.3s,transform 0.3s;
 }
 nav a:hover{
-  color: var(--saffron);
-  transform: scale(1.1);
+  color:var(--saffron);
+  transform:scale(1.1);
 }
+
 
 header{
   text-align:center;
   padding:120px 20px 80px 20px;
-  background: url('image/india-digital-bg.png') no-repeat center/cover;
+  background:url('image/india-digital-bg.png') no-repeat center/cover;
   position:relative;
   overflow:hidden;
 }
 header::after{
-  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.8));
 }
 header h1{
   font-size:50px;
   font-weight:800;
-  color: var(--white);
-  position: relative;
+  color:var(--white);
+  position:relative;
   z-index:1;
   text-shadow:0 0 15px #fff;
-  animation: fadeInUp 1s ease forwards;
+  animation:fadeInUp 1s ease forwards;
 }
 header p{
   margin-top:15px;
   font-size:18px;
   font-weight:500;
-  position: relative;
+  position:relative;
   z-index:1;
-  animation: fadeInUp 1.2s ease forwards;
+  animation:fadeInUp 1.2s ease forwards;
 }
+
 
 section{
   max-width:1100px;
@@ -88,36 +88,30 @@ h2{
   font-size:32px;
   margin-bottom:25px;
   color:var(--saffron);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  position:relative;
 }
 h2::after{
-  content:''; width:60px; height:3px;
+  content:'';width:60px;height:3px;
   background:var(--green);
   display:block;
   margin-top:5px;
   border-radius:2px;
 }
-.lead{
-  font-size:18px;
-  color:var(--muted);
-  margin-bottom:30px;
-}
+.lead{font-size:18px;color:var(--muted);margin-bottom:30px;}
+
 
 #struggles{
-  background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1));
+  background:linear-gradient(135deg,rgba(255,153,51,0.1),rgba(19,136,8,0.1));
   border-left:5px solid var(--saffron);
-  border-radius: var(--radius);
+  border-radius:var(--radius);
   padding:30px;
   margin-top:40px;
   box-shadow:0 0 25px rgba(255,255,255,0.08);
 }
-#struggles p{
-  margin-bottom:20px;
-  font-size:17px;
-  color: var(--muted);
-}
+#struggles p{margin-bottom:20px;font-size:17px;color:var(--muted);}
+
 
 .grid{
   display:grid;
@@ -129,63 +123,58 @@ h2::after{
   padding:25px;
   border-radius:var(--radius);
   border:1px solid rgba(255,255,255,0.1);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  transition:transform 0.3s,box-shadow 0.3s,background 0.3s;
   cursor:pointer;
   text-align:center;
-  backdrop-filter: blur(5px);
+  backdrop-filter:blur(5px);
 }
 .card:hover{
-  transform: translateY(-10px) scale(1.05);
+  transform:translateY(-10px) scale(1.05);
   box-shadow:0 0 35px rgba(0,255,255,0.5);
-  background: rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.12);
 }
-.card h3{margin-bottom:10px; font-size:20px; color:var(--white);}
-.card p{font-size:15px; color:var(--muted);}
+.card h3{margin-bottom:10px;font-size:20px;color:var(--white);}
+.card p{font-size:15px;color:var(--muted);}
 
+
+#map{text-align:center;}
 .map-container{
   position:relative;
   width:100%;
   max-width:900px;
-  margin:auto;
+  margin:40px auto;
   border-radius:var(--radius);
   overflow:hidden;
   box-shadow:0 0 30px rgba(0,200,255,0.5);
 }
-.map-container img{width:100%; display:block; border-radius: var(--radius);}
-.hotspot{
-  position:absolute;
-  width:25px;
-  height:25px;
-  border-radius:50%;
-  background: var(--saffron);
-  box-shadow: 0 0 10px #fff,0 0 25px var(--saffron);
-  cursor:pointer;
-  transition: all 0.3s;
+.map-container img{
+  width:100%;
+  display:block;
+  border-radius:var(--radius);
 }
-.hotspot:hover{
-  transform: scale(1.6);
-  background:#00ff99;
+.map-text{
+  max-width:950px;
+  margin:40px auto 0 auto;
+  background:rgba(255,255,255,0.05);
+  padding:25px 30px;
+  border-radius:var(--radius);
+  text-align:justify;
+  line-height:1.8;
+  font-size:17px;
+  color:var(--muted);
+  border-left:5px solid var(--saffron);
+  border-right:5px solid var(--green);
+  box-shadow:0 0 25px rgba(0,255,255,0.15);
+  transition:transform 0.3s,box-shadow 0.3s;
 }
-.hotspot::after{
-  content: attr(data-text);
-  position:absolute;
-  bottom:30px;
-  left:-40px;
-  width:180px;
-  background: rgba(0,0,0,0.8);
-  color:#fff;
-  padding:8px;
-  font-size:13px;
-  border-radius:6px;
-  opacity:0;
-  transform: translateY(10px);
-  transition:0.3s;
-  pointer-events:none;
+.map-text:hover{
+  transform:scale(1.02);
+  box-shadow:0 0 40px rgba(0,255,255,0.3);
+  background:rgba(255,255,255,0.08);
 }
-.hotspot:hover::after{
-  opacity:1;
-  transform: translateY(0);
-}
+.map-text p{margin-bottom:18px;}
+.map-text .highlight{color:#00ffff;font-weight:600;}
+
 
 footer{
   text-align:center;
@@ -194,17 +183,19 @@ footer{
   color:#000;
   font-weight:600;
   margin-top:60px;
-  transition: all 0.3s;
+  transition:all 0.3s;
 }
 footer:hover{
   box-shadow:0 0 25px rgba(0,255,255,0.4);
-  transform: scale(1.02);
+  transform:scale(1.02);
 }
 
+
 @keyframes fadeInUp{
-  0%{opacity:0; transform: translateY(20px);}
-  100%{opacity:1; transform: translateY(0);}
+  0%{opacity:0;transform:translateY(20px);}
+  100%{opacity:1;transform:translateY(0);}
 }
+
 
 @media(max-width:900px){
   header h1{font-size:38px;}
@@ -213,8 +204,7 @@ footer:hover{
 @media(max-width:600px){
   .grid{grid-template-columns:1fr;}
   .card{padding:20px;}
-  nav{flex-wrap:wrap; gap:15px;}
-  .hotspot{width:20px; height:20px;}
+  nav{flex-wrap:wrap;gap:15px;}
   header{margin-top:100px;}
 }
 </style>
@@ -239,8 +229,13 @@ footer:hover{
   <h2>The Journey of Struggles & Growth</h2>
   <p>India’s path to becoming a digital superpower was not without challenges. In the early decades after independence, the nation faced impediments like poverty, illiteracy, lack of infrastructure, and limited access to technology. Rural and urban divides further slowed down progress, making it difficult for millions to access quality education, healthcare, and governance services.</p>
   <p>Despite these struggles, India embraced resilience and innovation. With the rise of IT hubs, affordable internet connectivity, and government-led digital initiatives, the country transformed its technological landscape. From overcoming the digital divide to launching satellites and advancing AI research, India steadily grew into a nation where technology empowers every citizen and drives global innovation.</p>
-</section>
 
+  <h3 style="color:#00ffff;text-align:center;margin-top:40px;text-shadow:0 0 15px #00ffff;"> The Vision of Digital India 2047 </h3>
+  <div class="map-text">
+   
+    <p><strong>Digital India 2047</strong> marks a grand vision of a new India — a nation that embraces technology not merely as a tool but as a transformative power shaping every aspect of life, economy, and governance. As India approaches 100 years of independence, the initiative envisions a country where digital empowerment, innovation, and inclusivity converge to create a smart, sustainable, and globally leading society. It is about transforming India from a developing nation into a digitally self-reliant civilization — one that leads with knowledge, compassion, and vision.</p>
+  </div>
+</section>
 
 <section id="vision">
   <h2>Vision 2047</h2>
@@ -254,7 +249,6 @@ footer:hover{
   </div>
 </section>
 
-
 <section id="innovations">
   <h2>Technologies Shaping India</h2>
   <div class="grid">
@@ -267,20 +261,16 @@ footer:hover{
   </div>
 </section>
 
-
-
 <section id="map">
   <h2>Innovation Map</h2>
   <div class="map-container">
     <img src="image/p1.png" alt="Innovation Map">
-    <div class="hotspot hotspot-north" data-text="Battery & EV Revolution"></div>
-    <div class="hotspot hotspot-west" data-text="Smart Cities & Governance"></div>
-    <div class="hotspot hotspot-south" data-text="IT & Future Tech"></div>
-    <div class="hotspot hotspot-east" data-text="Cloud & Cybersecurity"></div>
-    <div class="hotspot hotspot-central" data-text="AI in Agriculture"></div>
+  </div>
+  <div class="map-text">
+    <p>The <strong>Innovation Map of Digital India 2047</strong> symbolizes the nation’s vision of becoming a global digital powerhouse by harnessing cutting-edge technologies across all sectors. This futuristic blueprint highlights the seamless integration of <span class="highlight">artificial intelligence, cloud computing, robotics</span>, and data-driven governance to empower citizens and businesses alike.</p>
+    <p>By 2047, India envisions a fully connected ecosystem where innovation drives <span class="highlight">sustainable development</span> and improved quality of life. <strong>Digital India 2047</strong> stands as a symbol of a nation reimagined — intelligent, efficient, and ready to lead the world into a new era of technological excellence.</p>
   </div>
 </section>
-
 
 <section id="goals">
   <h2>Focus Areas</h2>
@@ -291,14 +281,11 @@ footer:hover{
   </div>
 </section>
 
-
-
 <section id="contact">
   <h2>Contact</h2>
   <p class="lead">Connect with the Digital India 2047 initiative to learn more or collaborate.</p>
   <p>Email: digitalindia2047@gmail.com | Phone: +91-123-456-7890</p>
 </section>
-
 
 <footer>
   Digital India 2047 — By sudeep mishra
