@@ -1,5 +1,4 @@
-
-<!--this page is creaetd by sudeep mishra student of arena amimation.-->
+<!-- This page is created by Sudeep Mishra, student of Arena Animation. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,205 +6,246 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital India 2047</title>
 <style>
-html{scroll-behavior:smooth;}
-:root{
-  --saffron:#FF9933;
-  --white:#ffffff;
-  --green:#138808;
-  --bg:#0d1117;
-  --muted:rgba(255,255,255,0.7);
-  --radius:18px;
+html {
+  scroll-behavior: smooth;
 }
-*{box-sizing:border-box;margin:0;padding:0;}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:linear-gradient(to bottom,#0d1117,#05080f);
-  color:var(--white);
-  line-height:1.6;
-  overflow-x:hidden;
+:root {
+  --saffron: #FF9933;
+  --white: #ffffff;
+  --green: #138808;
+  --bg: #0d1117;
+  --muted: rgba(255,255,255,0.7);
+  --radius: 18px;
 }
-
-
-nav{
-  position:fixed;
-  top:0;left:0;right:0;
-  background:linear-gradient(90deg,rgba(0,0,0,0.9),rgba(20,20,20,0.9));
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:15px;
-  z-index:1000;
-  backdrop-filter:blur(8px);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-nav a{
-  color:var(--white);
-  text-decoration:none;
-  font-weight:bold;
-  transition:color 0.3s,transform 0.3s;
-}
-nav a:hover{
-  color:var(--saffron);
-  transform:scale(1.1);
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #0d1117, #05080f);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-
-header{
-  text-align:center;
-  padding:120px 20px 80px 20px;
-  background:url('image/india-digital-bg.png') no-repeat center/cover;
-  position:relative;
-  overflow:hidden;
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(20,20,20,0.9));
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
 }
-header::after{
-  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
-  background:linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.8));
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
 }
-header h1{
-  font-size:50px;
-  font-weight:800;
-  color:var(--white);
-  position:relative;
-  z-index:1;
-  text-shadow:0 0 15px #fff;
-  animation:fadeInUp 1s ease forwards;
-}
-header p{
-  margin-top:15px;
-  font-size:18px;
-  font-weight:500;
-  position:relative;
-  z-index:1;
-  animation:fadeInUp 1.2s ease forwards;
+nav a:hover {
+  color: var(--saffron);
+  transform: scale(1.1);
 }
 
-
-section{
-  max-width:1100px;
-  margin:80px auto;
-  padding:20px;
+/* HEADER */
+header {
+  text-align: center;
+  padding: 120px 20px 80px 20px;
+  background: url('image/india-digital-bg.png') no-repeat center/cover;
+  position: relative;
+  overflow: hidden;
 }
-h2{
-  font-size:32px;
-  margin-bottom:25px;
-  color:var(--saffron);
-  text-transform:uppercase;
-  letter-spacing:1px;
-  position:relative;
+header::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
 }
-h2::after{
-  content:'';width:60px;height:3px;
-  background:var(--green);
-  display:block;
-  margin-top:5px;
-  border-radius:2px;
+header h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 15px #fff;
+  animation: fadeInUp 1s ease forwards;
 }
-.lead{font-size:18px;color:var(--muted);margin-bottom:30px;}
-
-
-#struggles{
-  background:linear-gradient(135deg,rgba(255,153,51,0.1),rgba(19,136,8,0.1));
-  border-left:5px solid var(--saffron);
-  border-radius:var(--radius);
-  padding:30px;
-  margin-top:40px;
-  box-shadow:0 0 25px rgba(255,255,255,0.08);
-}
-#struggles p{margin-bottom:20px;font-size:17px;color:var(--muted);}
-
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-.card{
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,0.1);
-  transition:transform 0.3s,box-shadow 0.3s,background 0.3s;
-  cursor:pointer;
-  text-align:center;
-  backdrop-filter:blur(5px);
-}
-.card:hover{
-  transform:translateY(-10px) scale(1.05);
-  box-shadow:0 0 35px rgba(0,255,255,0.5);
-  background:rgba(255,255,255,0.12);
-}
-.card h3{margin-bottom:10px;font-size:20px;color:var(--white);}
-.card p{font-size:15px;color:var(--muted);}
-
-
-#map{text-align:center;}
-.map-container{
-  position:relative;
-  width:100%;
-  max-width:900px;
-  margin:40px auto;
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 0 30px rgba(0,200,255,0.5);
-}
-.map-container img{
-  width:100%;
-  display:block;
-  border-radius:var(--radius);
-}
-.map-text{
-  max-width:950px;
-  margin:40px auto 0 auto;
-  background:rgba(255,255,255,0.05);
-  padding:25px 30px;
-  border-radius:var(--radius);
-  text-align:justify;
-  line-height:1.8;
-  font-size:17px;
-  color:var(--muted);
-  border-left:5px solid var(--saffron);
-  border-right:5px solid var(--green);
-  box-shadow:0 0 25px rgba(0,255,255,0.15);
-  transition:transform 0.3s,box-shadow 0.3s;
-}
-.map-text:hover{
-  transform:scale(1.02);
-  box-shadow:0 0 40px rgba(0,255,255,0.3);
-  background:rgba(255,255,255,0.08);
-}
-.map-text p{margin-bottom:18px;}
-.map-text .highlight{color:#00ffff;font-weight:600;}
-
-
-footer{
-  text-align:center;
-  padding:50px 20px;
-  background:linear-gradient(90deg,var(--saffron),var(--white),var(--green));
-  color:#000;
-  font-weight:600;
-  margin-top:60px;
-  transition:all 0.3s;
-}
-footer:hover{
-  box-shadow:0 0 25px rgba(0,255,255,0.4);
-  transform:scale(1.02);
+header p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease forwards;
 }
 
-
-@keyframes fadeInUp{
-  0%{opacity:0;transform:translateY(20px);}
-  100%{opacity:1;transform:translateY(0);}
+/* GENERAL SECTION */
+section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 20px;
+}
+h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: var(--saffron);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+h2::after {
+  content: '';
+  width: 60px; height: 3px;
+  background: var(--green);
+  display: block;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+.lead {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 30px;
 }
 
-
-@media(max-width:900px){
-  header h1{font-size:38px;}
-  header p{font-size:16px;}
+/* STRUGGLES */
+#struggles {
+  background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1));
+  border-left: 5px solid var(--saffron);
+  border-radius: var(--radius);
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
 }
-@media(max-width:600px){
-  .grid{grid-template-columns:1fr;}
-  .card{padding:20px;}
-  nav{flex-wrap:wrap;gap:15px;}
-  header{margin-top:100px;}
+#struggles p {
+  margin-bottom: 20px;
+  font-size: 17px;
+  color: var(--muted);
+}
+
+/* GRID CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  cursor: pointer;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 35px rgba(0,255,255,0.5);
+  background: rgba(255,255,255,0.12);
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: var(--white);
+}
+.card p {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* CARD IMAGES */
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 15px rgba(0,255,255,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover .card-img {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0,255,255,0.5);
+}
+
+/* MAP SECTION */
+#map { text-align: center; }
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,200,255,0.5);
+}
+.map-container img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+.map-text {
+  max-width: 950px;
+  margin: 40px auto 0 auto;
+  background: rgba(255,255,255,0.05);
+  padding: 25px 30px;
+  border-radius: var(--radius);
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 17px;
+  color: var(--muted);
+  border-left: 5px solid var(--saffron);
+  border-right: 5px solid var(--green);
+  box-shadow: 0 0 25px rgba(0,255,255,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.map-text:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0,255,255,0.3);
+  background: rgba(255,255,255,0.08);
+}
+.map-text .highlight {
+  color: #00ffff;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(90deg, var(--saffron), var(--white), var(--green));
+  color: #000;
+  font-weight: 600;
+  margin-top: 60px;
+  transition: all 0.3s;
+}
+footer:hover {
+  box-shadow: 0 0 25px rgba(0,255,255,0.4);
+  transform: scale(1.02);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  header h1 { font-size: 38px; }
+  header p { font-size: 16px; }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .card { padding: 20px; }
+  nav { flex-wrap: wrap; gap: 15px; }
+  header { margin-top: 100px; }
 }
 </style>
 </head>
@@ -229,35 +269,85 @@ footer:hover{
   <h2>The Journey of Struggles & Growth</h2>
   <p>India’s path to becoming a digital superpower was not without challenges. In the early decades after independence, the nation faced impediments like poverty, illiteracy, lack of infrastructure, and limited access to technology. Rural and urban divides further slowed down progress, making it difficult for millions to access quality education, healthcare, and governance services.</p>
   <p>Despite these struggles, India embraced resilience and innovation. With the rise of IT hubs, affordable internet connectivity, and government-led digital initiatives, the country transformed its technological landscape. From overcoming the digital divide to launching satellites and advancing AI research, India steadily grew into a nation where technology empowers every citizen and drives global innovation.</p>
-
-  <h3 style="color:#00ffff;text-align:center;margin-top:40px;text-shadow:0 0 15px #00ffff;"> The Vision of Digital India 2047 </h3>
-  <div class="map-text">
-   
-    <p><strong>Digital India 2047</strong> marks a grand vision of a new India — a nation that embraces technology not merely as a tool but as a transformative power shaping every aspect of life, economy, and governance. As India approaches 100 years of independence, the initiative envisions a country where digital empowerment, innovation, and inclusivity converge to create a smart, sustainable, and globally leading society. It is about transforming India from a developing nation into a digitally self-reliant civilization — one that leads with knowledge, compassion, and vision.</p>
-  </div>
 </section>
 
+<!-- Vision 2047 Section -->
 <section id="vision">
   <h2>Vision 2047</h2>
   <p class="lead">In 2047, India is a global leader in AI, green tech, digital education, smart cities, and inclusive technology.</p>
+
   <div class="grid">
-    <div class="card">🏙️<h3>Smart Cities</h3><p>AI-driven infrastructure and connected urban spaces for sustainable living.</p></div>
-    <div class="card">🩺<h3>AI in Health & Education</h3><p>Smart diagnostics, personalized learning, and AI-assisted services nationwide.</p></div>
-    <div class="card">🚆<h3>Clean & Connected Transport</h3><p>Electric vehicles, hyperloop, and smart traffic management systems.</p></div>
-    <div class="card">🏡<h3>Digital Villages</h3><p>Rural areas empowered with internet, e-governance, and digital marketplaces.</p></div>
-    <div class="card">📜<h3>100% Digital Governance</h3><p>Transparent, citizen-first digital services across the country.</p></div>
+    <div class="card">
+      <img src="image/p4.png" alt="Smart City" class="card-img">
+      <h3>🏙️ Smart Cities</h3>
+      <p>AI-driven infrastructure and connected urban spaces for sustainable living.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p2.png" alt="AI in Health & Education" class="card-img">
+      <h3>🩺 AI in Health & Education</h3>
+      <p>Smart diagnostics, personalized learning, and AI-assisted services nationwide.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p3.png" alt="Clean Transport" class="card-img">
+      <h3>🚆 Clean & Connected Transport</h3>
+      <p>Electric vehicles, hyperloop, and smart traffic management systems.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p5.png" alt="Digital Villages" class="card-img">
+      <h3>🏡 Digital Villages</h3>
+      <p>Rural areas empowered with internet, e-governance, and digital marketplaces.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p6.png" alt="Digital Governance" class="card-img">
+      <h3>📜 100% Digital Governance</h3>
+      <p>Transparent, citizen-first digital services across the country.</p>
+    </div>
   </div>
 </section>
 
+<!-- Technologies Shaping India Section -->
 <section id="innovations">
   <h2>Technologies Shaping India</h2>
   <div class="grid">
-    <div class="card">🌐<h3>6G Internet & Satellite Connectivity</h3><p>Ultra-fast, low-latency networks for all citizens.</p></div>
-    <div class="card">🤖<h3>AI in Agriculture</h3><p>Automated farming, smart irrigation, and precision agriculture.</p></div>
-    <div class="card">🏥<h3>Robotics in Hospitals</h3><p>Remote surgery, AI diagnostics, and hospital automation.</p></div>
-    <div class="card">🔗<h3>Blockchain for Governance</h3><p>Transparent, secure, and decentralized government services.</p></div>
-    <div class="card">🕶️<h3>AR/VR in Education</h3><p>Immersive learning making education interactive and fun.</p></div>
-    <div class="card">⚡<h3>Renewable Energy Grid</h3><p>Decentralized solar, wind, and hydroelectric power systems.</p></div>
+    <div class="card">
+      <img src="image/p7.png" alt="6G Internet & Satellite Connectivity" class="card-img">
+      <h3>🌐 6G Internet & Satellite Connectivity</h3>
+      <p>Ultra-fast, low-latency networks connecting every corner of the nation, enabling seamless global communication.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p8.png" alt="AI in Agriculture" class="card-img">
+      <h3>🤖 AI in Agriculture</h3>
+      <p>Automated farming, smart irrigation, and precision agriculture transforming rural productivity.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p9.png" alt="Robotics in Hospitals" class="card-img">
+      <h3>🏥 Robotics in Hospitals</h3>
+      <p>Remote surgeries, AI-assisted diagnostics, and robotic automation improving healthcare efficiency.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p10.png" alt="Blockchain for Governance" class="card-img">
+      <h3>🔗 Blockchain for Governance</h3>
+      <p>Transparent, secure, and decentralized systems ensuring corruption-free administration.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p11.png" alt="AR/VR in Education" class="card-img">
+      <h3>🕶️ AR/VR in Education</h3>
+      <p>Immersive and interactive learning experiences bridging the gap between theory and practice.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p12.png" alt="Renewable Energy Grid" class="card-img">
+      <h3>⚡ Renewable Energy Grid</h3>
+      <p>Decentralized solar, wind, and hydro networks ensuring sustainable energy for every citizen.</p>
+    </div>
   </div>
 </section>
 
@@ -268,16 +358,30 @@ footer:hover{
   </div>
   <div class="map-text">
     <p>The <strong>Innovation Map of Digital India 2047</strong> symbolizes the nation’s vision of becoming a global digital powerhouse by harnessing cutting-edge technologies across all sectors. This futuristic blueprint highlights the seamless integration of <span class="highlight">artificial intelligence, cloud computing, robotics</span>, and data-driven governance to empower citizens and businesses alike.</p>
-    <p>By 2047, India envisions a fully connected ecosystem where innovation drives <span class="highlight">sustainable development</span> and improved quality of life. <strong>Digital India 2047</strong> stands as a symbol of a nation reimagined — intelligent, efficient, and ready to lead the world into a new era of technological excellence.</p>
   </div>
 </section>
 
+<!-- ✅ UPDATED Focus Areas Section with Image Cards -->
 <section id="goals">
   <h2>Focus Areas</h2>
   <div class="grid">
-    <div class="card">🌐<h3>Infrastructure</h3><p>6G, mesh networks, and green energy-powered data centers.</p></div>
-    <div class="card">💰<h3>Economy</h3><p>Empowering startups, micro-entrepreneurs, and global digital leadership.</p></div>
-    <div class="card">🏛<h3>Governance</h3><p>AI-powered transparent digital platforms and citizen-first policies.</p></div>
+    <div class="card">
+      <img src="image/p14.png" alt="Infrastructure" class="card-img">
+      <h3>🌐 Infrastructure</h3>
+      <p>6G, mesh networks, and green energy-powered data centers driving the backbone of digital connectivity.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p16.png" alt="Economy" class="card-img">
+      <h3>💰 Economy</h3>
+      <p>Empowering startups, MSMEs, and digital entrepreneurs to build a globally competitive economy.</p>
+    </div>
+
+    <div class="card">
+      <img src="image/p15.png" alt="Governance" class="card-img">
+      <h3>🏛 Governance</h3>
+      <p>AI-powered transparent platforms ensuring efficiency, inclusion, and accountability for every citizen.</p>
+    </div>
   </div>
 </section>
 
@@ -288,7 +392,7 @@ footer:hover{
 </section>
 
 <footer>
-  Digital India 2047 — By sudeep mishra
+  Digital India 2047 — By Sudeep Mishra
 </footer>
 
 </body>
